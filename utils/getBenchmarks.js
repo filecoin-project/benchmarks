@@ -1,6 +1,12 @@
 const yaml = require('yaml');
 
-const { readdirSync, readFileSync, writeFileSync } = require('fs');
+const {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  writeFileSync,
+} = require('fs');
 
 const getDirectories = (source) =>
   readdirSync(source, { withFileTypes: true })
@@ -73,5 +79,8 @@ getDirectories('benchmarks').forEach((dir) => {
       ...benchmark,
       stats: parseStats(benchmark.rawBench),
     }));
+  if (!existsSync('data')) {
+    mkdirSync('data');
+  }
   writeFileSync(`data/${dir}.json`, JSON.stringify(files));
 });
