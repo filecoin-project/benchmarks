@@ -19,8 +19,8 @@ const Result = ({ benchmark }) => {
     <div className="result-wrapper">
       <div className="hardware">
         <span>
-          <img src="cpu.svg" width="16" height="16" /> {benchmark.cpu.brand}{' '}
-          {benchmark.cpu.model}
+          <img src="cpu.svg" width="16" height="16" />
+          {benchmark.cpu.brand} {benchmark.cpu.model}
         </span>
         <span>
           <img src="monitor.svg" width="16" height="16" />
@@ -65,20 +65,20 @@ const Result = ({ benchmark }) => {
         div.hardware {
           flex-basis: 100%;
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           margin-bottom: 1rem;
         }
         div.hardware > span {
-          flex-basis: 33%;
+          flex-basis: 33.3%;
         }
         div.hardware > span > img {
           position: relative;
           transform: translateY(2px);
-          opacity: 0.5;
+          opacity: 0.8;
           margin-right: 0.5rem;
         }
         div.stat {
-          flex-basis: 33%;
+          flex-basis: 33.3%;
         }
         div.stat-label > h3 {
           color: hsl(206, 10%, 60%);
