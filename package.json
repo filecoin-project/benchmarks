@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn parse-data && next build",
     "start": "next start",
-    "export": "yarn parse-data && next build && next export",
+    "export": "next build && next export",
     "parse-data": "node utils/getBenchmarks.js"
   },
   "dependencies": {
