@@ -66,7 +66,7 @@ const Result = ({ benchmark }) => {
           flex-basis: 100%;
           display: flex;
           justify-content: flex-start;
-          margin-bottom: 1rem;
+          margin-bottom: 1.5rem;
         }
         div.hardware > span {
           flex-basis: 33.3%;
@@ -82,9 +82,10 @@ const Result = ({ benchmark }) => {
         }
         div.stat-label > h3 {
           color: hsl(206, 10%, 60%);
-          margin: 0 0 0.5rem 0;
+          margin: 0;
           font-size: 1.2rem;
           font-weight: 500;
+          margin-bottom: 0.25rem;
         }
         div.stat-label span {
           font-size: 14px;
@@ -96,14 +97,18 @@ const Result = ({ benchmark }) => {
           div.hardware {
             display: block;
           }
+
           div.hardware > span {
             display: block;
+            margin-bottom: 0.25rem;
+          }
+          div.stat > span {
             margin-bottom: 0.25rem;
           }
           div.stat {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: flex-end;
 
           }
           div.stat > p {
