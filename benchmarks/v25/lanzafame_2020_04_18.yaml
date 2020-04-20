@@ -1,0 +1,29 @@
+rawBench: |
+  results (v25) (34359738368)
+  seal: addPiece: 9m7.632161054s (59.8 MiB/s)
+  seal: preCommit phase 1: 6h38m45.484945499s (1.37 MiB/s)
+  seal: preCommit phase 2: 4h9m17.072368154s (2.19 MiB/s)
+  seal: commit phase 1: 1m22.252252314s (398 MiB/s)
+  seal: commit phase 2: 56m58.61967175s (9.59 MiB/s)
+  seal: verify: 72.790272ms
+  unseal: 26.331526ms  (1.19 TiB/s)
+  generate candidates: 136.06µs (230 TiB/s)
+  compute winnnig post proof (cold): 11.827111725s
+  compute winnnig post proof (hot): 8.346984357s
+  verify winnnig post proof (cold): 95.603945ms
+  verify winnnig post proof (hot): 37.435814ms
+  compute window post proof (cold): 25m35.285944104s
+  compute window post proof (hot): 25m4.347243048s
+  verify window post proof (cold): 11.389335106s
+  verify window post proof (hot): 4.304758849s
+cpu:
+  brand: AMD
+  model: EPYC 7352
+  cores: 48
+  speed: 2.3GHz/3.2GHz
+gpu:
+  brand: NVidia
+  model: TITAN RTX
+ram:
+  amount: 330GB
+  speed: 2933mhz/2666mhz
