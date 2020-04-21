@@ -17,7 +17,7 @@ You will need **600GB** of free disk space available, replace the value of `/sto
 **Build and Run**
 
 ```
-$ git clone --branch feat/windowed-post https://github.com/filecoin-project/lotus.git
+$ git clone --branch testnet/3 https://github.com/filecoin-project/lotus.git
 $ cd lotus
 $ env RUSTFLAGS="-C target-cpu=native -g" FFI_BUILD_FROM_SOURCE=1 make clean deps bench
 $ env FIL_PROOFS_MAXIMIZE_CACHING=1 RUST_LOG=info TMPDIR=/storage ./bench sealing --storage-dir /storage/bench --sector-size 32GiB 2>&1 | tee bench.log
