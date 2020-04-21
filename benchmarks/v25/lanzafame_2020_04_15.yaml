@@ -1,21 +1,21 @@
 rawBench: |
   results (v25) (34359738368)
-  seal: addPiece: 13m6.183975145s (41.7 MiB/s)
-  seal: preCommit phase 1: 21h7m33.318371154s (441 KiB/s)
-  seal: preCommit phase 2: 56m23.238811382s (9.69 MiB/s)
-  seal: commit phase 1: 795.79806ms (40.2 GiB/s)
-  seal: commit phase 2: 1h35m4.06863434s (5.74 MiB/s)
-  seal: verify: 75.344444ms
-  unseal: 2.274309ms  (13.7 TiB/s)
-  generate candidates: 292.508µs (107 TiB/s)
-  compute winnnig post proof (cold): 6.270913873s
-  compute winnnig post proof (hot): 5.982318469s
-  verify winnnig post proof (cold): 79.505736ms
-  verify winnnig post proof (hot): 35.669096ms
-  compute window post proof (cold): 31m36.361610216s
-  compute window post proof (hot): 31m28.272473997s
-  verify window post proof (cold): 10.693921496s
-  verify window post proof (hot): 4.160899381s
+  seal: addPiece: 8m32.098135127s (64 MiB/s)
+  seal: preCommit phase 1: 5h17m24.790511522s (1.72 MiB/s)
+  seal: preCommit phase 2: 53m56.186239453s (10.1 MiB/s)
+  seal: commit phase 1: 782.348549ms (40.9 GiB/s)
+  seal: commit phase 2: 1h37m31.133891185s (5.6 MiB/s)
+  seal: verify: 87.856293ms
+  unseal: 1.953986ms  (16 TiB/s)
+  generate candidates: 633.905µs (49.3 TiB/s)
+  compute winnnig post proof (cold): 6.232044046s
+  compute winnnig post proof (hot): 6.158606358s
+  verify winnnig post proof (cold): 78.188576ms
+  verify winnnig post proof (hot): 35.714479ms
+  compute window post proof (cold): 32m2.131491298s
+  compute window post proof (hot): 32m1.883302139s
+  verify window post proof (cold): 10.549946313s
+  verify window post proof (hot): 4.092338512s
 cpu:
   brand: AMD
   model: EPYC 7702P
@@ -26,4 +26,4 @@ gpu:
   model: none
 ram:
   amount: 128GB
-  speed: 2933mhz
+  speed: 2933mhz/2666mhz

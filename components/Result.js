@@ -43,13 +43,13 @@ const Result = ({ benchmark }) => {
       </div>
       <div className="stat">
         <div className="stat-label">
-          <h3>WinningPoST</h3>
+          <h3>WinningPoSt</h3>
         </div>
         <span>{timeStringFromMs(benchmark.stats.winningPostTimeMs)}</span>
       </div>
       <div className="stat">
         <div className="stat-label">
-          <h3>WindowPoST</h3>
+          <h3>WindowPoSt</h3>
         </div>
         <span>{timeStringFromMs(benchmark.stats.windowPostTimeMs)}</span>
       </div>
