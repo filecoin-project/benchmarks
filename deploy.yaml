@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: filecoin-benchmarks
+spec:
+  selector:
+    matchLabels:
+      app: filecoin-benchmarks
+  replicas: 1
+  revisionHistoryLimit: 0
+  template:
+    metadata:
+      labels:
+        app: filecoin-benchmarks
+    spec:
+      containers:
+      - name: filecoin-benchmarks
+        image: __AWS_ECR_REGISTRY__/coinsummer/filecoin-benchmarks:__TAG__
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: regcred

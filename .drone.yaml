@@ -1,0 +1,64 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+  - name: prepare
+    image: alpine
+    environment: 
+      AWS_ECR_REGISTRY: 
+        from_secret: aws_ecr_registry
+    commands:
+      - sed -i -e 's,__TAG__,'$DRONE_COMMIT_SHA',g' deploy.yaml
+      - sed -i -e 's,__AWS_ECR_REGISTRY__,'$AWS_ECR_REGISTRY',g' deploy.yaml
+      - cat deploy.yaml
+
+  - name: publish
+    image: plugins/ecr
+    environment:
+      AWS_ECR_REGISTRY: 
+        from_secret: aws_ecr_registry
+    settings:
+      access_key: 
+        from_secret: aws_access_key
+      secret_key: 
+        from_secret: aws_secret_key
+      region: 
+        from_secret: aws_ecr_region
+      registry: 
+        from_secret: aws_ecr_registry
+      repo: ${AWS_ECR_REGISTRY}coinsummer/${DRONE_REPO_NAME}
+      tags:
+        - ${DRONE_COMMIT_SHA}
+      create_repository: true
+
+  - name: deploy
+    image: danielgormly/drone-plugin-kube:0.0.1
+    settings: 
+      template: deploy.yaml
+      namespace:
+        from_secret: deploy_namespace
+      server:
+        from_secret: kubernetes_server
+      ca:
+        from_secret: kubernetes_ca
+      token:
+        from_secret: kubernetes_token
+
+  - name: notify
+    image: plugins/slack
+    settings:
+      webhook: 
+        from_secret: slack_webhook
+      channel: deploy
+      success_template: |
+        The build is fixed! Thanks @{{slack.name}}
+      failure_template: |
+        The build is broken! Blame {{slack.name}}
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
+    - pull_request
