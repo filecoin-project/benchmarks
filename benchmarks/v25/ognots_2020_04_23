@@ -1,0 +1,32 @@
+rawBench: |
+  results (v25) (34359738368)
+  seal: addPiece: 6m16.912701072s (86.9 MiB/s)
+  seal: preCommit phase 1: 4h34m33.431441267s (1.99 MiB/s)
+  seal: preCommit phase 2: 2h36m52.217359161s (3.48 MiB/s)
+  seal: commit phase 1: 1m59.416362077s (274 MiB/s)
+  seal: commit phase 2: 48m59.333182375s (11.1 MiB/s)
+  seal: verify: 60.664811ms
+  unseal: 936.769845ms  (34.2 GiB/s)
+
+  generate candidates: 780.809µs (40 TiB/s)
+  compute winnnig post proof (cold): 6.254061486s
+  compute winnnig post proof (hot): 4.449169354s
+  verify winnnig post proof (cold): 57.087701ms
+  verify winnnig post proof (hot): 27.032498ms
+
+  compute window post proof (cold): 18m25.637777902s
+  compute window post proof (hot): 18m0.239259273s
+  verify window post proof (cold): 7.999117473s
+  verify window post proof (hot): 3.120021991s
+
+cpu:
+  brand: AMD
+  model: Ryzen 9 3950X
+  cores: 16
+  speed: 3.5GHz/4.7GHz
+gpu:
+  brand: NVidia
+  model: RTX 2080Ti
+ram:
+  amount: 128GB
+  speed: 3200mhz
