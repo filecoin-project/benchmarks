@@ -7,13 +7,11 @@ rawBench: |
   seal: commit phase 2: 53m25.031384665s (10.2 MiB/s)
   seal: verify: 77.12948ms
   unseal: 10.209698ms  (3.06 TiB/s)
-
   generate candidates: 670.321µs (46.6 TiB/s)
   compute winnnig post proof (cold): 12.213374564s
   compute winnnig post proof (hot): 5.37845871s
   verify winnnig post proof (cold): 166.71767ms
   verify winnnig post proof (hot): 62.22412ms
-
   compute window post proof (cold): 26m29.699457251s
   compute window post proof (hot): 26m53.553452435s
   verify window post proof (cold): 10.48191964s
