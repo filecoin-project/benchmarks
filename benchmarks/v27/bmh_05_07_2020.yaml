@@ -1,0 +1,29 @@
+rawBench: |
+  results (v27) (34359738368)
+  seal: addPiece: 13m6.712383418s (41.65 MiB/s)
+  seal: preCommit phase 1: 5h5m53.590766902s (1.785 MiB/s)
+  seal: preCommit phase 2: 1h57m39.361887764s (4.642 MiB/s)
+  seal: commit phase 1: 624.848039ms (51.21 GiB/s)
+  seal: commit phase 2: 57m3.963723596s (9.57 MiB/s)
+  seal: verify: 33.504883ms
+  unseal: 5h4m3.729988813s  (1.796 MiB/s)
+  generate candidates: 1.719026ms (18.18 TiB/s)
+  compute winning post proof (cold): 5.386421407s
+  compute winning post proof (hot): 5.229740682s
+  verify winning post proof (cold): 50.445683ms
+  verify winning post proof (hot): 12.892574ms
+  compute window post proof (cold): 8m15.138402998s
+  compute window post proof (hot): 7m52.871953554s
+  verify window post proof (cold): 6.457152829s
+  verify window post proof (hot): 53.195688ms
+cpu:
+  brand: AMD
+  model: EPYC 7302P
+  cores: 16
+  speed: 3.0GHz/3.3GHz
+gpu:
+  brand: NVidia
+  model: Titan V
+ram:
+  amount: 256GB
+  speed: 2666mhz
