@@ -1,0 +1,31 @@
+rawBench: |
+	results (v27) (34359738368)
+	seal: addPiece: 11m23.386587091s (47.95 MiB/s)
+	seal: preCommit phase 1: 4h38m1.42167023s (1.964 MiB/s)
+	seal: preCommit phase 2: 1h0m23.047204389s (9.044 MiB/s)
+	seal: commit phase 1: 289.146823ms (110.7 GiB/s)
+	seal: commit phase 2: 49m21.115617954s (11.07 MiB/s)
+	seal: verify: 34.871657ms
+	unseal: 4h44m28.076093125s  (1.92 MiB/s)
+
+	generate candidates: 126.905µs (246.2 TiB/s)
+	compute winning post proof (cold): 11.869260407s
+	compute winning post proof (hot): 10.79857521s
+	verify winning post proof (cold): 55.084485ms
+	verify winning post proof (hot): 20.040563ms
+
+	compute window post proof (cold): 13m58.004095486s
+	compute window post proof (hot): 13m36.090409876s
+	verify window post proof (cold): 6.3455919s
+	verify window post proof (hot): 58.62706ms
+cpu:
+  brand: AMD
+  model: EPYC 7542
+  cores: 32
+  speed: 2.9GHz/3.4GHz
+gpu:
+  brand: NVidia
+  model: RTX 2080Ti
+ram:
+  amount: 512GB
+  speed: 2666mhz
