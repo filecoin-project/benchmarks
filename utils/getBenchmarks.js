@@ -45,7 +45,7 @@ const getTime = (bench) => {
 
 const parseStats = (rawBench) => {
   const lines = rawBench.split('\n').filter((line) => line.length > 5);
-  if (!line.length === 17) {
+  if (!lines.length === 17) {
     console.error('Invalid parse on benchmark', rawBench);
     exit(1);
   }
