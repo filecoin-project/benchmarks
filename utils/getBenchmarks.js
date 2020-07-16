@@ -1,4 +1,5 @@
 const yaml = require('yaml');
+const { exit } = require('process');
 
 const {
   existsSync,
@@ -43,7 +44,11 @@ const getTime = (bench) => {
 };
 
 const parseStats = (rawBench) => {
-  const lines = rawBench.split('\n');
+  const lines = rawBench.split('\n').filter((line) => line.length > 5);
+  if (!line.length === 17) {
+    console.error('Invalid parse on benchmark', rawBench);
+    exit(1);
+  }
   const version = lines[0].split(' ')[1].slice(1, 4);
 
   const sealLines = [1, 2, 3, 4, 5, 6];

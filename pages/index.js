@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Result from '../components/Result';
 import Footer from '../components/Footer';
 
-import v25 from '../data/v25.json';
+import v27 from '../data/v27.json';
 
-export default function Home() {
-  const [activeVersion, setActiveVersion] = useState('v25');
+export default (props) => {
+  const [activeVersion, setActiveVersion] = useState('v27');
   const [filterBy, setFilterBy] = useState('sealing');
 
   return (
@@ -22,9 +22,7 @@ export default function Home() {
         <p className="description">
           Hardware performance comparisons from the Filecoin community
         </p>
-        <p className="subtitle">
-          v25 proofs, last updated {new Date().toLocaleDateString('en-us')}
-        </p>
+        <p className="subtitle">v27 proofs, last updated {props.updateTime}</p>
 
         <p className="warning">
           Filecoin is under active development and hardware combinations will
@@ -57,7 +55,7 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          {v25
+          {v27
             .filter((benchmark) => benchmark.stats.version === activeVersion)
             .sort((a, b) => {
               if (filterBy == 'sealing')
@@ -176,4 +174,13 @@ export default function Home() {
       `}</style>
     </div>
   );
-}
+};
+
+export const getStaticProps = async (ctx) => {
+  const updateTime = new Date().toLocaleDateString('en-us');
+  return {
+    props: {
+      updateTime,
+    },
+  };
+};
