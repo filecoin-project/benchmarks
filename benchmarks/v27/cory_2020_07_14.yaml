@@ -1,0 +1,32 @@
+rawBench: |
+results (v27) (34359738368)
+seal: addPiece: 14m51.374909192s (36.76 MiB/s)
+seal: preCommit phase 1: 4h5m58.473905301s (2.22 MiB/s)
+seal: preCommit phase 2: 1h8m50.466145925s (7.933 MiB/s)
+seal: commit phase 1: 1.588983065s (20.14 GiB/s)
+seal: commit phase 2: 1h15m16.460006921s (7.255 MiB/s)
+seal: verify: 30.126025ms
+unseal: 4h2m44.239151363s  (2.25 MiB/s)
+
+generate candidates: 13.002161ms (2.403 TiB/s)
+compute winning post proof (cold): 5.740997721s
+compute winning post proof (hot): 4.635926719s
+verify winning post proof (cold): 65.640084ms
+verify winning post proof (hot): 14.520851ms
+
+compute window post proof (cold): 10m47.271999112s
+compute window post proof (hot): 10m24.417988839s
+verify window post proof (cold): 5.033802105s
+verify window post proof (hot): 74.871781ms
+
+cpu:
+  brand: AMD
+  model: AMD Ryzen Threadripper 3960X 24-Core Processor
+  cores: 24
+  speed: 2.0GHz/3.5GHz
+gpu:
+  brand: NVidia
+  model: Quadro RTX 4000
+ram:
+  amount: 256GB
+  speed: 2667mhz
