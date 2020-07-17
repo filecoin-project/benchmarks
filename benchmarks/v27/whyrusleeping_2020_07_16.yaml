@@ -1,23 +1,23 @@
 rawBench: |
   results (v27) (34359738368)
-  seal: addPiece: 13m59.832305495s (39.02 MiB/s)
-  seal: preCommit phase 1: 5h51m37.351686568s (1.553 MiB/s)
-  seal: preCommit phase 2: 45m17.39982187s (12.06 MiB/s)
-  seal: commit phase 1: 522.181562ms (61.28 GiB/s)
-  seal: commit phase 2: 1h0m19.694386019s (9.053 MiB/s)
-  seal: verify: 45.103755ms
-  unseal: 6h5m7.336709077s  (1.496 MiB/s)
+  seal: addPiece: 12m59.93253756s (42.01 MiB/s)
+  seal: preCommit phase 1: 4h49m47.796749255s (1.885 MiB/s)
+  seal: preCommit phase 2: 27m19.548066339s (19.99 MiB/s)
+  seal: commit phase 1: 574.728848ms (55.68 GiB/s)
+  seal: commit phase 2: 55m53.890646097s (9.77 MiB/s)
+  seal: verify: 56.223189ms
+  unseal: 4h51m53.434738511s  (1.871 MiB/s)
 
-  generate candidates: 185.655_s (168.3 TiB/s)
-  compute winning post proof (cold): 14.758670289s
-  compute winning post proof (hot): 14.421872489s
-  verify winning post proof (cold): 59.724905ms
-  verify winning post proof (hot): 25.307494ms
+  generate candidates: 16.481544ms (1.896 TiB/s)
+  compute winning post proof (cold): 15.398747713s
+  compute winning post proof (hot): 14.753099983s
+  verify winning post proof (cold): 62.049453ms
+  verify winning post proof (hot): 24.14642ms
 
-  compute window post proof (cold): 7m46.157338813s
-  compute window post proof (hot): 6m55.289257964s
-  verify window post proof (cold): 6.543408378s
-  verify window post proof (hot): 130.357114ms
+  compute window post proof (cold): 7m6.264518672s
+  compute window post proof (hot): 6m53.931852318s
+  verify window post proof (cold): 6.49664701s
+  verify window post proof (hot): 94.84985ms
 cpu:
   brand: AMD
   model: EPYC 7402
