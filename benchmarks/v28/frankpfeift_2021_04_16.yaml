@@ -27,5 +27,5 @@ gpu:
   brand: NVidia
   model: RTX 3080
 ram:
-  amount: 256MiB
+  amount: 256GiB
   speed: 2666mhz
