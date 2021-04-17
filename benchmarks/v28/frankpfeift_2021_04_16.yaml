@@ -22,7 +22,7 @@ cpu:
   brand: AMD
   model: Threadripper 3960X
   cores: 24
-  speed: 2.2GHz/3.58Hz
+  speed: 2.2GHz/3.8Hz
 gpu:
   brand: NVidia
   model: RTX 3080
