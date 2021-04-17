@@ -1,0 +1,31 @@
+rawBench: |
+  results (v28) SectorSize:(34359738368), SectorNumber:(1)
+  seal: addPiece: 1m3.712436009s (514.3 MiB/s)
+  seal: preCommit phase 1: 3h10m11.910007976s (2.871 MiB/s)
+  seal: preCommit phase 2: 18m50.42096215s (28.99 MiB/s)
+  seal: commit phase 1: 477.714659ms (66.99 GiB/s)
+  seal: commit phase 2: 20m11.316476597s (27.05 MiB/s)
+  seal: verify: 9.002198ms
+  unseal: 3h11m37.989526053s  (2.85 MiB/s)
+
+  generate candidates: 2.880312ms (10.85 TiB/s)
+  compute winning post proof (cold): 1.274439161s
+  compute winning post proof (hot): 1.09963742s
+  verify winning post proof (cold): 74.431143ms
+  verify winning post proof (hot): 3.132117ms
+
+  compute window post proof (cold): 3m52.828041419s
+  compute window post proof (hot): 3m27.255838351s
+  verify window post proof (cold): 7.209445054s
+  verify window post proof (hot): 13.471677ms
+cpu:
+  brand: AMD
+  model: Threadripper 3960X
+  cores: 24
+  speed: 2.2GHz/3.58Hz
+gpu:
+  brand: NVidia
+  model: RTX 3080
+ram:
+  amount: 256MiB
+  speed: 2666mhz
